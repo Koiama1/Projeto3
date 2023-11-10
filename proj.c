@@ -87,7 +87,7 @@ void alterar_tarefa(struct Tarefa *tarefa, int opcao) {
             printf("Opção inválida!\n\n");
     }
 }
-
+//filtra uma lista com a especificação de prioridade
 void filtrar_por_prioridade(struct Tarefa *tarefas, int cont) {
     int prioridade_filtro;
     printf("Digite a prioridade para filtrar: ");
@@ -105,7 +105,7 @@ void filtrar_por_prioridade(struct Tarefa *tarefas, int cont) {
         }
     }
 }
-
+//filtra uma lista com a especificação de estado
 void filtrar_por_estado(struct Tarefa *tarefas, int cont) {
   int escolha_estado;
   printf("Digite o número correspondente ao estado para filtrar (1 - Completo, 2 - Em andamento, 3 - Não iniciado): ");
@@ -143,7 +143,7 @@ void filtrar_por_estado(struct Tarefa *tarefas, int cont) {
           }
       }
   }
-
+//filtra uma lista com a especificação de categoria
 void filtrar_por_categoria(struct Tarefa *tarefas, int cont) {
     char categoria_filtro[100];
     printf("Digite a categoria para filtrar: ");
@@ -161,7 +161,7 @@ void filtrar_por_categoria(struct Tarefa *tarefas, int cont) {
         }
     }
 }
-
+//filtra uma lista com as especificações de prioridade e categoria
 void filtrar_por_prioridade_categoria(struct Tarefa *tarefas, int cont) {
     int prioridade_filtro;
     char categoria_filtro[100];
@@ -185,7 +185,7 @@ void filtrar_por_prioridade_categoria(struct Tarefa *tarefas, int cont) {
         }
     }
 }
-
+//exporta um arquivo filtrando por prioridade
 void exportar_por_prioridade(struct Tarefa *tarefas, int cont) {
     int prioridade_filtro;
     printf("Digite a prioridade para exportar: ");
@@ -213,7 +213,7 @@ void exportar_por_prioridade(struct Tarefa *tarefas, int cont) {
     fclose(arquivo_exportacao);
     printf("Exportação concluída!\n");
 }
-
+//exporta um arquivo filtrando por categoria
 void exportar_por_categoria(struct Tarefa *tarefas, int cont) {
     char categoria_filtro[100];
     printf("Digite a categoria para exportar: ");
@@ -241,7 +241,7 @@ void exportar_por_categoria(struct Tarefa *tarefas, int cont) {
     fclose(arquivo_exportacao);
     printf("Exportação concluída!\n");
 }
-
+//Exporta um arquivo com um filtro de prioridade e categoria
 void exportar_por_prioridade_categoria(struct Tarefa *tarefas, int cont) {
     int prioridade_filtro;
     char categoria_filtro[100];
