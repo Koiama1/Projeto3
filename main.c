@@ -29,7 +29,10 @@ int main() {
         printf(" 6 - Filtrar por Estado\n");
         printf(" 7 - Filtrar por Categoria\n");
         printf(" 8 - Filtrar por Prioridade e Categoria\n");
-        printf(" 9 - Sair\n");
+        printf(" 9 - exportar por prioridade\n");
+        printf(" 10- exportar por categoria\n");
+        printf(" 11 - exportar por prioridade e por categoria\n");
+        printf(" 12 - Sair\n");
         printf("Digite o numero da opcao que deseja usar: ");
 
         char *p, s_opcao[100];
@@ -106,11 +109,22 @@ int main() {
             filtrar_por_prioridade_categoria(t, cont);
           
         } else if (opcao == 9) {
+            exportar_por_prioridade(t, cont);
+            
+            }
+          else if (opcao == 10) {
+            exportar_por_categoria(t, cont);
+            
+        } else if (opcao == 11) {
+            exportar_por_prioridade_categoria(t, cont);
+            
+        } else if (opcao == 12) {
             arquivo_binario = fopen("tarefas.txt", "wb");
             if (arquivo_binario) {
                 fwrite(t, sizeof(struct Tarefa), cont, arquivo_binario);
                 fclose(arquivo_binario);
-            }
+          }
+          
             printf("Saindo\n");
             break;
         } else {
