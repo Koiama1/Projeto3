@@ -1,18 +1,16 @@
 #ifndef PROJETO_H
 #define PROJETO_H
-
 //Antigo membros do grupo do projeto 1:
 //João Pedro Lopes - RA: 24.123.071-3
 //João Pedro Peterutto - RA: 24.123.045-7
 
 //Criador desse projeto 3:
 //Gabriel Koiama - RA: 24.123.051-5
-
 struct Tarefa {
     int prioridade;
     char categoria[100];
     char descricao[300];
-    char estado[20]; // Novo campo para o estado da tarefa
+    char estado[20];
 };
 
 void limpa();
