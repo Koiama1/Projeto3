@@ -1,6 +1,7 @@
 #ifndef PROJETO_H
 #define PROJETO_H
 
+//dados da tarefa
 struct Tarefa {
     int prioridade;
     char categoria[100];
@@ -8,6 +9,7 @@ struct Tarefa {
     char estado[20];
 };
 
+//todas as funções
 void limpa();
 void ler(struct Tarefa *armazena);
 void excluir_tarefa(struct Tarefa *tarefas, int *cont, int posicao);
