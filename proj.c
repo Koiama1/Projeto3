@@ -6,7 +6,7 @@ void limpa() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
 }
-
+//Está função cria uma tarefa e pede para voce escrever os dados dela
 void ler(struct Tarefa *armazena) {
     printf("Prioridade: ");
     scanf("%d", &armazena->prioridade);
@@ -42,7 +42,7 @@ void ler(struct Tarefa *armazena) {
             break;
     }
 }
-
+//função para excluir uma tarefa em especifico
 void excluir_tarefa(struct Tarefa *tarefas, int *cont, int posicao) {
     if (posicao >= 1 && posicao <= *cont) {
         for (int i = posicao - 1; i < *cont - 1; i++) {
@@ -55,7 +55,7 @@ void excluir_tarefa(struct Tarefa *tarefas, int *cont, int posicao) {
         printf("Posição inválida!\n\n");
     }
 }
-
+//função para alterar uma tarefa em especifico
 void alterar_tarefa(struct Tarefa *tarefa, int opcao) {
     switch (opcao) {
       
