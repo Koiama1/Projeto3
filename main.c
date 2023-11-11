@@ -6,7 +6,7 @@
 
 
 int main() {
-  
+  //abre o arquivo
     struct Tarefa t[100];
     FILE *arquivo_binario = fopen("tarefas.txt", "rb");
     int cont = 0;
@@ -19,7 +19,7 @@ int main() {
     }
 
     int posicao = 0;
-
+//mostra o menu com as opções do programa
     while (1) {
         printf(" 1 - Criar\n");
         printf(" 2 - Excluir\n");
@@ -40,7 +40,7 @@ int main() {
         int opcao;
         fgets(s_opcao, sizeof(s_opcao), stdin);
         opcao = strtol(s_opcao, &p, 10);
-
+//A partir daqui é a confirmação de qual opção o usuario escolheu
         if (opcao == 1) {
             ler(&t[cont]);
             printf("Tarefa criada!\n\n");
